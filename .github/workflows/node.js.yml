@@ -46,6 +46,12 @@ jobs:
         eslint: true
         prettier: true
         
+    - name: Static Analysis with Polaris Action
+      uses: devsecops-test/polaris-action@c362842
+      with:
+        polarisServerUrl: ${{secrets.POLARIS_SERVER_URL_CSPROD}}
+        polarisAccessToken: ${{secrets.POLARIS_ACCESS_TOKEN_CSPROD}}
+        polarisProjectName: polaris-action-sample
    # -- Build your project here -- eg. mvn clean package
     - name: Polaris
       uses: blackducksoftware/github-action@2.0.1
