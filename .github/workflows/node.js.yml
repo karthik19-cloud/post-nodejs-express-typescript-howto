@@ -48,9 +48,9 @@ jobs:
         
    # -- Build your project here -- eg. mvn clean package
     - name: Polaris
-      uses: blackducksoftware/github-action@2.0.0
+      uses: blackducksoftware/github-action@2.0.1
       with:
-        args: '--polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"'
+        args: --polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"
     #- name: Synopsys Detect
     #  uses: blackducksoftware/github-action@2.0.0
     #  with:
