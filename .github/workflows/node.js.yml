@@ -47,12 +47,12 @@ jobs:
         prettier: true
         
    # -- Build your project here -- eg. mvn clean package
-    #- name: Polaris
-      #uses: blackducksoftware/github-action@2.0.0
-      #with:
-        #args: '--polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"'
-    - name: Synopsys Detect
+    - name: Polaris
       uses: blackducksoftware/github-action@2.0.0
       with:
-        args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --detect.risk.report.pdf=true'
+        args: '--polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"'
+    #- name: Synopsys Detect
+    #  uses: blackducksoftware/github-action@2.0.0
+    #  with:
+    #    args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --detect.risk.report.pdf=true'
 
