@@ -4,10 +4,10 @@
 name: CI Feature
 
 on:
-  push:
-    branches: [ feature1 ]
-  #pull_request:
-    #branches: [ master ]
+  #push:
+    #branches: [ feature1 ]
+  pull_request:
+    branches: [ Develop ]
 
 jobs:
   build:
